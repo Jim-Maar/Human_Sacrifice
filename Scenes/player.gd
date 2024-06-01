@@ -1,8 +1,10 @@
 extends CharacterBody2D
 
 
-@export var SPEED = 300.0
-@export var JUMP_VELOCITY = -400.0
+@export var SPEED = 2000.0
+@export var JUMP_VELOCITY = -2000.0
+
+@onready var platform = preload("res://Scenes/Platform.tscn")
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -16,7 +18,7 @@ func _ready():
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		velocity.y += gravity * delta * 5
 
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
@@ -40,4 +42,11 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _on_killed():
+	var instance = platform.instantiate()
+
+	instance.global_position.x = self.global_position.x 
+	instance.global_position.y = self.global_position.y + 50
+
+	#self.position = SPAWN_POINT
+	get_parent().add_child(instance)
 	print("Player killed")

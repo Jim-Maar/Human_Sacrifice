@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://qr7wspup0t77"]
-
-[node name="RayCast2D" type="RayCast2D"]
-
-[node name="Line2D" type="Line2D" parent="."]
