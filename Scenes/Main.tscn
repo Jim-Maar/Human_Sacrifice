@@ -24,6 +24,10 @@ texture = ExtResource("3_gpawa")
 1:3/0 = 0
 2:3/0 = 0
 3:3/0 = 0
+4:0/0 = 0
+4:1/0 = 0
+4:2/0 = 0
+4:3/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_axdth"]
 sources/0 = SubResource("TileSetAtlasSource_jo3ic")
@@ -48,7 +52,7 @@ offset_bottom = 30.6176
 scale = Vector2(0.546014, 0.489888)
 
 [node name="Level" type="TileMap" parent="."]
-position = Vector2(55, 249)
+position = Vector2(206, 139)
 tile_set = SubResource("TileSet_axdth")
 format = 2
 

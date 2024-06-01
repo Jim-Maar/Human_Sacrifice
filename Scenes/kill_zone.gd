@@ -13,9 +13,5 @@ func _ready():
 
 func _on_body_entered(body:Node2D):
 	if body.name == "Player":
-		emit_signal("killed")
-		# body.queue_free()
-
-
-func _on_killed():
-	pass # Replace with function body.
+		# emit_signal("killed")
+		killed.emit()

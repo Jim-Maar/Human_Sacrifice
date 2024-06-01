@@ -8,8 +8,9 @@ extends CharacterBody2D
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
-# func _ready():
-# 	self.connect("killed", self, "_on_killed")
+func _ready():
+	var kill_zone = get_parent().get_node("KillZone")  # Adjust the path to your player node
+	kill_zone.connect("killed", _on_killed)
 
 
 func _physics_process(delta):
@@ -37,3 +38,6 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+func _on_killed():
+	print("Player killed")
