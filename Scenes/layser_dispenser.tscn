@@ -1,12 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfkyqwxkvaong"]
+[gd_scene load_steps=3 format=3 uid="uid://bfkyqwxkvaong"]
+
+[ext_resource type="Script" path="res://Scenes/Laser.gd" id="1_uc4ph"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qiwy3"]
 
 [node name="LayserDispenser" type="StaticBody2D"]
+position = Vector2(-166, -97)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_qiwy3")
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
+[node name="Laser" type="RayCast2D" parent="."]
+scale = Vector2(1.95329, -3.97888)
+target_position = Vector2(194, 0)
+script = ExtResource("1_uc4ph")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

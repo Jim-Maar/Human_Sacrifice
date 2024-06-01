@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://yxb574aco8n2"]
+[gd_scene load_steps=8 format=3 uid="uid://yxb574aco8n2"]
 
 [ext_resource type="PackedScene" uid="uid://bxgkhngoidxsh" path="res://Scenes/player.tscn" id="1_iqalf"]
 [ext_resource type="Texture2D" uid="uid://cy5e3p8am7kt2" path="res://Assets/tilemap_test.png" id="3_gpawa"]
 [ext_resource type="PackedScene" uid="uid://byjxih4isx5k7" path="res://Scenes/kill_zone.tscn" id="3_xu10y"]
+[ext_resource type="PackedScene" uid="uid://bfkyqwxkvaong" path="res://Scenes/layser_dispenser.tscn" id="4_bj3xt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4d4iy"]
 
@@ -58,3 +59,5 @@ format = 2
 
 [node name="KillZone" parent="." instance=ExtResource("3_xu10y")]
 position = Vector2(274, 23)
+
+[node name="LayserDispenser" parent="." instance=ExtResource("4_bj3xt")]

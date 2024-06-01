@@ -7,6 +7,7 @@ extends CharacterBody2D
 @onready var platform = preload("res://Scenes/Platform.tscn")
 
 @onready var player_animation: AnimatedSprite2D = $AnimatedSprite2D
+@onready var game_manager = get_node("/root/GameManager")
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -51,6 +52,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _on_killed():
+	game_manager.player_died.emit()
 	var instance = platform.instantiate()
 
 	instance.global_position.x = self.global_position.x 
