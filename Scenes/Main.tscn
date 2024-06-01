@@ -32,7 +32,7 @@ texture = ExtResource("3_gpawa")
 [sub_resource type="TileSet" id="TileSet_axdth"]
 sources/0 = SubResource("TileSetAtlasSource_jo3ic")
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_iqalf")]
 texture_filter = 1
