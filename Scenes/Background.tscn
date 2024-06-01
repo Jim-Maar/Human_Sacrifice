@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkwfi6hdi540s"]
+
+[ext_resource type="Texture2D" uid="uid://bpbi4q3l4ycg" path="res://Assets/purple_L1.png" id="1_p7s8s"]
+[ext_resource type="Texture2D" uid="uid://8gwwunsidq0q" path="res://Assets/purple_L2.png" id="2_2t8wd"]
+[ext_resource type="Texture2D" uid="uid://ds8cpya1shs8o" path="res://Assets/purple_L3.png" id="3_p8c8d"]
+[ext_resource type="Texture2D" uid="uid://8gl6p1v6gkrw" path="res://Assets/purple_L4.png" id="4_4j7ys"]
+
+[node name="Background" type="Node2D"]
+
+[node name="L1" type="Sprite2D" parent="."]
+texture = ExtResource("1_p7s8s")
+
+[node name="L2" type="Sprite2D" parent="."]
+texture = ExtResource("2_2t8wd")
+
+[node name="L3" type="Sprite2D" parent="."]
+texture = ExtResource("3_p8c8d")
+
+[node name="L4" type="Sprite2D" parent="."]
+scale = Vector2(1, 0.987556)
+texture = ExtResource("4_4j7ys")
