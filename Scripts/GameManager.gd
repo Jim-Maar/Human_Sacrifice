@@ -1,12 +1,12 @@
 extends Node2D
 
-var max_deaths
+var max_deaths = 5
 var death_count
 
 signal player_died
 
 func _ready():
-    player_died.connect(on_player_death())
+    player_died.connect(on_player_death)
     death_count = 0
     pass # Replace with function body.
 
