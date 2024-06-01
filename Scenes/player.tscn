@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dp7606burpdat"]
+[gd_scene load_steps=4 format=3 uid="uid://bxgkhngoidxsh"]
 
 [ext_resource type="Script" path="res://Scenes/player.gd" id="1_my7he"]
 [ext_resource type="Texture2D" uid="uid://c8utejtlb5sm7" path="res://Assets/tilemap_cult.png" id="2_kgdtx"]
@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dkmw3"]
 size = Vector2(192, 234)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_my7he")
 
 [node name="Camera2D" type="Camera2D" parent="."]

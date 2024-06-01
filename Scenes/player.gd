@@ -8,6 +8,10 @@ extends CharacterBody2D
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
+# func _ready():
+# 	self.connect("killed", self, "_on_killed")
+
+
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
